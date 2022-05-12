@@ -1,0 +1,22 @@
+<div id="alta" >
+  <h2 class="text-primary">Alta cliente</h2>
+  <div class="mt-7 mb-4">
+    <label for="inputNombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="ESCRIBE NOMBRE" [(ngModel)]="cliente.nombre">
+  </div>
+  <div class="mb-3">
+    <label for="inputCif" class="form-label">CIF</label>
+    <input type="text" class="form-control" id="inputCif" placeholder="ESCRIBE CIF" [(ngModel)]="cliente.cif">
+  </div>
+  <div class="mb-3">
+    <label for="inputDireccion" class="form-label">Dirección</label>
+    <input type="text" class="form-control" id="inputDireccion" placeholder="ESCRIBE DIRECCION" [(ngModel)]="cliente.direccion">
+  </div>
+  <div class="mb-3">
+    <label for="selectGrupo" class="form-label">Grupo</label>
+    <select class="form-select" [(ngModel)]="cliente.grupo">
+      <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.nombre}}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary w-100 mt-5" (click)="this.nuevoCliente()">Guardar</button>
+</div>

@@ -1,0 +1,7 @@
+#container {
+    width: 50%;
+    margin: 10%;
+    display: flex;
+    justify-items: center;
+    color:darkgoldenrod;
+}
